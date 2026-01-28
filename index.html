@@ -81,11 +81,11 @@
                 </h2>
                 <div class="profiles-grid">
                     <a href="https://scholar.google.com.pk/citations?user=OOfV-CIAAAAJ&hl=en" target="_blank" class="profile-card">
-                        <span class="material-icons">school</span>
+                        <img src="icons8-google-scholar-48.svg" alt="Google Scholar" class="profile-icon">
                         <span>Google Scholar Profile</span>
                     </a>
                     <a href="https://linkedin.com/in/khalid-saleem-49386338" target="_blank" class="profile-card">
-                        <span class="material-icons">business_center</span>
+                        <img src="icons8-linkedin-48.svg" alt="LinkedIn" class="profile-icon">
                         <span>LinkedIn Profile</span>
                     </a>
                     <a href="https://cs.qau.edu.pk/profiles/khalid.htm" target="_blank" class="profile-card">
@@ -140,42 +140,83 @@
                     <span class="material-icons">school</span>
                     PhD Openings
                 </h2>
-                <div class="phd-openings-grid">
-                    <div class="phd-opportunity-card">
-                        <div class="phd-number">01</div>
-                        <div class="phd-icon">
+                <p class="section-description">Available research opportunities for prospective doctoral candidates. Join our research team and contribute to cutting-edge innovations.</p>
+                
+                <div class="phd-openings-grid-new">
+                    <div class="phd-card-modern">
+                        <div class="phd-card-header">
+                            <div class="phd-position-number">Position 01</div>
+                            <span class="phd-status-badge available">Available</span>
+                        </div>
+                        <div class="phd-card-icon">
                             <span class="material-icons">security</span>
                         </div>
-                        <h3 class="phd-title">Information Systems Security</h3>
-                        <div class="phd-topic">
-                            <span class="material-icons topic-icon">label</span>
+                        <h3 class="phd-research-area">Information Systems Security</h3>
+                        <div class="phd-divider"></div>
+                        <div class="phd-research-topic">
+                            <span class="topic-label">Research Focus:</span>
                             <p>Learning With Errors (LWE) based Post Quantum Cryptography Security</p>
                         </div>
-                        <div class="phd-badge">Open Position</div>
+                        <div class="phd-keywords">
+                            <span class="keyword-tag">Cryptography</span>
+                            <span class="keyword-tag">Quantum Security</span>
+                            <span class="keyword-tag">LWE</span>
+                        </div>
+                        <a href="mailto:ksaleem@qau.edu.pk?subject=PhD Application - Information Systems Security" class="phd-apply-btn">
+                            <span class="material-icons">send</span>
+                            Apply Now
+                        </a>
                     </div>
-                    <div class="phd-opportunity-card">
-                        <div class="phd-number">02</div>
-                        <div class="phd-icon">
+
+                    <div class="phd-card-modern">
+                        <div class="phd-card-header">
+                            <div class="phd-position-number">Position 02</div>
+                            <span class="phd-status-badge available">Available</span>
+                        </div>
+                        <div class="phd-card-icon">
                             <span class="material-icons">language</span>
                         </div>
-                        <h3 class="phd-title">Natural Language Processing</h3>
-                        <div class="phd-topic">
-                            <span class="material-icons topic-icon">label</span>
+                        <h3 class="phd-research-area">Natural Language Processing</h3>
+                        <div class="phd-divider"></div>
+                        <div class="phd-research-topic">
+                            <span class="topic-label">Research Focus:</span>
                             <p>Large Language Model Generated Information quantization and distillation for Arabic-Scripted Low-Resource Languages</p>
                         </div>
-                        <div class="phd-badge">Open Position</div>
+                        <div class="phd-keywords">
+                            <span class="keyword-tag">LLM</span>
+                            <span class="keyword-tag">NLP</span>
+                            <span class="keyword-tag">Low-Resource</span>
+                        </div>
+                        <a href="mailto:ksaleem@qau.edu.pk?subject=PhD Application - Natural Language Processing" class="phd-apply-btn">
+                            <span class="material-icons">send</span>
+                            Apply Now
+                        </a>
                     </div>
-                    <div class="phd-opportunity-card">
-                        <div class="phd-number">03</div>
-                        <div class="phd-icon">
+
+                    <div class="phd-card-modern">
+                        <div class="phd-card-header">
+                            <div class="phd-position-number">Position 03</div>
+                            <span class="phd-status-badge available">Available</span>
+                        </div>
+                        <div class="phd-card-icon">
                             <span class="material-icons">recommend</span>
                         </div>
-                        <h3 class="phd-title">Recommendation Systems</h3>
-                        <div class="phd-topic">
-                            <span class="material-icons topic-icon">label</span>
+                        <h3 class="phd-research-area">Recommendation Systems</h3>
+                        <div class="phd-divider"></div>
+                        <div class="phd-research-topic">
+                            <span class="topic-label">Research Focus:</span>
                             <p>Enhancing Accuracy, Personalization, and User Trust with Privacy Preservation through Large Language Models (LLM) and Graph Neural Networks (GNN) in Recommender Systems</p>
                         </div>
-                        <div class="phd-badge">Open Position</div>
+                        <div class="phd-keywords">
+                            <span class="keyword-tag">Recommender Systems</span>
+                            <span class="keyword-tag">LLM</span>
+                            <span class="keyword-tag">GNN</span>
+                            <span class="keyword-tag">Privacy</span>
+                        </div>
+                        <a href="mailto:ksaleem@qau.edu.pk?subject=PhD Application - Recommendation Systems" class="phd-apply-btn">
+                            <span class="material-icons">send</span>
+                            Apply Now
+                        </a>
                     </div>
                 </div>
             </section>
@@ -222,7 +263,7 @@
                             <span class="material-icons">expand_more</span>
                             <span class="btn-text">Show All Publications</span>
                         </button>
-                        <span class="publication-count">30 Journal Articles</span>
+                        <!-- <span class="publication-count">5 Journal Articles</span> -->
                     </div>
                     <div class="table-responsive">
                         <table class="publications-table" id="journals-table">
@@ -936,70 +977,146 @@
                     <span class="material-icons">school</span>
                     Courses Taught
                 </h2>
-                <div class="courses-grid">
-                    <div class="course-card">
-                        <h4>CSC-224</h4>
-                        <p>Database Systems [BS]</p>
+                
+                <!-- BS Level Courses -->
+                <div class="course-category">
+                    <h3 class="course-category-title">
+                        <span class="category-badge bs-badge">BS</span>
+                        Bachelor's Level Courses
+                    </h3>
+                    <div class="courses-grid">
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-224</span>
+                                <span class="course-level">BS</span>
+                            </div>
+                            <p class="course-title">Database Systems</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-311</span>
+                                <span class="course-level">BS</span>
+                            </div>
+                            <p class="course-title">Analysis & Design of Algorithms</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-313</span>
+                                <span class="course-level">BS</span>
+                            </div>
+                            <p class="course-title">Computer Architecture</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-324</span>
+                                <span class="course-level">BS</span>
+                            </div>
+                            <p class="course-title">Web Application Development</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-442</span>
+                                <span class="course-level">BS</span>
+                            </div>
+                            <p class="course-title">Mobile Application Development</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-445</span>
+                                <span class="course-level">BS</span>
+                            </div>
+                            <p class="course-title">Information Systems</p>
+                        </div>
                     </div>
-                    <div class="course-card">
-                        <h4>CSC-311</h4>
-                        <p>Analysis & Design of Algorithms [BS]</p>
+                </div>
+
+                <!-- MS Level Courses -->
+                <div class="course-category">
+                    <h3 class="course-category-title">
+                        <span class="category-badge ms-badge">MS</span>
+                        Master's Level Courses
+                    </h3>
+                    <div class="courses-grid">
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-652</span>
+                                <span class="course-level">MS</span>
+                            </div>
+                            <p class="course-title">Advanced Analysis of Algorithms</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-65X</span>
+                                <span class="course-level">MS</span>
+                            </div>
+                            <p class="course-title">Intelligent Information System</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-702</span>
+                                <span class="course-level">MS</span>
+                            </div>
+                            <p class="course-title">Advanced Operating Systems</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-751</span>
+                                <span class="course-level">MS</span>
+                            </div>
+                            <p class="course-title">Distributed Systems</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-772</span>
+                                <span class="course-level">MS</span>
+                            </div>
+                            <p class="course-title">Data Mining</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">DSC-672</span>
+                                <span class="course-level">MS</span>
+                            </div>
+                            <p class="course-title">e-Government</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">IST-785</span>
+                                <span class="course-level">MS</span>
+                            </div>
+                            <p class="course-title">Selected Topics in IST</p>
+                        </div>
                     </div>
-                    <div class="course-card">
-                        <h4>CSC-313</h4>
-                        <p>Computer Architecture [BS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-324</h4>
-                        <p>Web Application Development [BS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-442</h4>
-                        <p>Mobile Application Development [BS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-445</h4>
-                        <p>Information Systems [BS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-652</h4>
-                        <p>Advanced Analysis of Algorithms [MS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-65X</h4>
-                        <p>Intelligent Information System [MS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-702</h4>
-                        <p>Advanced Operating Systems [MS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-751</h4>
-                        <p>Distributed Systems [MS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-772</h4>
-                        <p>Data Mining [MS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>DSC-672</h4>
-                        <p>e-Government [MS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>IST-785</h4>
-                        <p>Selected Topics in IST [MS]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CS-663</h4>
-                        <p>Knowledge Representation [MS/PhD]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-823</h4>
-                        <p>Data Warehousing [MS/PhD]</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>CSC-863</h4>
-                        <p>Metadata Model Management [MS/PhD]</p>
+                </div>
+
+                <!-- MS/PhD Level Courses -->
+                <div class="course-category">
+                    <h3 class="course-category-title">
+                        <span class="category-badge phd-badge">PhD</span>
+                        Master's / Doctoral Level Courses
+                    </h3>
+                    <div class="courses-grid">
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CS-663</span>
+                                <span class="course-level">MS/PhD</span>
+                            </div>
+                            <p class="course-title">Knowledge Representation</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-823</span>
+                                <span class="course-level">MS/PhD</span>
+                            </div>
+                            <p class="course-title">Data Warehousing</p>
+                        </div>
+                        <div class="course-card-new">
+                            <div class="course-header">
+                                <span class="course-code">CSC-863</span>
+                                <span class="course-level">MS/PhD</span>
+                            </div>
+                            <p class="course-title">Metadata Model Management</p>
+                        </div>
                     </div>
                 </div>
             </section>
