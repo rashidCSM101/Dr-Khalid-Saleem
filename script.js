@@ -21,11 +21,52 @@ function openTab(event, tabName) {
 
 // Smooth scroll for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const menuCloseBtn = document.querySelector('.menu-close-btn');
+    const menuOverlay = document.querySelector('.mobile-menu-overlay');
+    
+    function openMenu() {
+        navMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+        navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            if (navMenu.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+    }
+    
+    if (menuCloseBtn) {
+        menuCloseBtn.addEventListener('click', closeMenu);
+    }
+    
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', closeMenu);
+    }
+
     const navLinks = document.querySelectorAll('.nav-menu a');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
+            
+            // Close mobile menu
+            if (navMenu && window.innerWidth <= 768) {
+                closeMenu();
+            }
             
             // Only handle internal links (those starting with #)
             if (href.startsWith('#')) {
@@ -77,10 +118,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe content sections
     const sections = document.querySelectorAll('.content-section');
     sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
+        // Skip animation for publications section for faster load
+        if (section.id === 'publications') {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+        } else {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        }
     });
 
     // Mobile menu toggle (if needed in future)
