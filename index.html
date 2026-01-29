@@ -138,86 +138,15 @@
             <section id="phd-openings" class="content-section">
                 <h2 class="section-title">
                     <span class="material-icons">school</span>
-                    PhD Openings
+                    PhD Openings (3)
                 </h2>
+                
                 <p class="section-description">Available research opportunities for prospective doctoral candidates. Join our research team and contribute to cutting-edge innovations.</p>
                 
-                <div class="phd-openings-grid-new">
-                    <div class="phd-card-modern">
-                        <div class="phd-card-header">
-                            <div class="phd-position-number">Position 01</div>
-                            <span class="phd-status-badge available">Available</span>
-                        </div>
-                        <div class="phd-card-icon">
-                            <span class="material-icons">security</span>
-                        </div>
-                        <h3 class="phd-research-area">Information Systems Security</h3>
-                        <div class="phd-divider"></div>
-                        <div class="phd-research-topic">
-                            <span class="topic-label">Research Focus:</span>
-                            <p>Learning With Errors (LWE) based Post Quantum Cryptography Security</p>
-                        </div>
-                        <div class="phd-keywords">
-                            <span class="keyword-tag">Cryptography</span>
-                            <span class="keyword-tag">Quantum Security</span>
-                            <span class="keyword-tag">LWE</span>
-                        </div>
-                        <a href="mailto:ksaleem@qau.edu.pk?subject=PhD Application - Information Systems Security" class="phd-apply-btn">
-                            <span class="material-icons">send</span>
-                            Apply Now
-                        </a>
-                    </div>
-
-                    <div class="phd-card-modern">
-                        <div class="phd-card-header">
-                            <div class="phd-position-number">Position 02</div>
-                            <span class="phd-status-badge available">Available</span>
-                        </div>
-                        <div class="phd-card-icon">
-                            <span class="material-icons">language</span>
-                        </div>
-                        <h3 class="phd-research-area">Natural Language Processing</h3>
-                        <div class="phd-divider"></div>
-                        <div class="phd-research-topic">
-                            <span class="topic-label">Research Focus:</span>
-                            <p>Large Language Model Generated Information quantization and distillation for Arabic-Scripted Low-Resource Languages</p>
-                        </div>
-                        <div class="phd-keywords">
-                            <span class="keyword-tag">LLM</span>
-                            <span class="keyword-tag">NLP</span>
-                            <span class="keyword-tag">Low-Resource</span>
-                        </div>
-                        <a href="mailto:ksaleem@qau.edu.pk?subject=PhD Application - Natural Language Processing" class="phd-apply-btn">
-                            <span class="material-icons">send</span>
-                            Apply Now
-                        </a>
-                    </div>
-
-                    <div class="phd-card-modern">
-                        <div class="phd-card-header">
-                            <div class="phd-position-number">Position 03</div>
-                            <span class="phd-status-badge available">Available</span>
-                        </div>
-                        <div class="phd-card-icon">
-                            <span class="material-icons">recommend</span>
-                        </div>
-                        <h3 class="phd-research-area">Recommendation Systems</h3>
-                        <div class="phd-divider"></div>
-                        <div class="phd-research-topic">
-                            <span class="topic-label">Research Focus:</span>
-                            <p>Enhancing Accuracy, Personalization, and User Trust with Privacy Preservation through Large Language Models (LLM) and Graph Neural Networks (GNN) in Recommender Systems</p>
-                        </div>
-                        <div class="phd-keywords">
-                            <span class="keyword-tag">Recommender Systems</span>
-                            <span class="keyword-tag">LLM</span>
-                            <span class="keyword-tag">GNN</span>
-                            <span class="keyword-tag">Privacy</span>
-                        </div>
-                        <a href="mailto:ksaleem@qau.edu.pk?subject=PhD Application - Recommendation Systems" class="phd-apply-btn">
-                            <span class="material-icons">send</span>
-                            Apply Now
-                        </a>
-                    </div>
+                <div class="phd-badges-container">
+                    <span class="phd-badge">Information Systems Security - LWE based Post Quantum Cryptography</span>
+                    <span class="phd-badge">Natural Language Processing - LLM for Arabic-Scripted Low-Resource Languages</span>
+                    <span class="phd-badge">Recommendation Systems - Privacy-Preserving LLM and GNN-based Recommender Systems</span>
                 </div>
             </section>
 
@@ -244,206 +173,344 @@
                 <button class="section-accordion" onclick="togglePublications()">
                     <div class="accordion-header">
                         <span class="material-icons accordion-icon">article</span>
-                        <h2 class="accordion-title">Publications (30)</h2>
+                        <h2 class="accordion-title">Publications (27)</h2>
                     </div>
                     <span class="material-icons accordion-arrow">expand_more</span>
                 </button>
                 
                 <div id="publications-content" class="accordion-content">
-                <!-- Tabs -->
-                <div class="tabs">
-                    <button class="tab-button active" onclick="openTab(event, 'journals')">Journal Articles</button>
-                    <button class="tab-button" onclick="openTab(event, 'books')">Books</button>
-                    <button class="tab-button" onclick="openTab(event, 'conferences')">Conferences</button>
-                    <button class="tab-button" onclick="openTab(event, 'projects')">Projects</button>
-                    <button class="tab-button" onclick="openTab(event, 'patents')">Patents</button>
-                    <button class="tab-button" onclick="openTab(event, 'awards')">Awards & Roles</button>
-                </div>
-
-                <!-- Journal Articles Tab -->
-                <div id="journals" class="tab-content active">
-                    <div class="collapse-control">
-                        <button class="collapse-btn" onclick="toggleTableRows('journals-table')">
-                            <span class="material-icons">expand_more</span>
-                            <span class="btn-text">Show All Publications</span>
-                        </button>
-                        <!-- <span class="publication-count">5 Journal Articles</span> -->
+                    <!-- Search Bar -->
+                    <div class="publication-search-bar">
+                        <span class="material-icons search-icon">search</span>
+                        <input type="text" id="publication-search" placeholder="Search publications by title, type, year, or DOI..." onkeyup="filterPublications()">
+                        <span class="material-icons clear-icon" onclick="clearSearch()" style="display: none;">close</span>
                     </div>
-                    <div class="table-responsive">
-                        <table class="publications-table" id="journals-table">
-                            <thead>
-                                <tr>
-                                    <th>S#</th>
-                                    <th>Authors</th>
-                                    <th>Journal</th>
-                                    <th>Title</th>
-                                    <th>Vol. & Pages</th>
-                                    <th>Category</th>
-                                    <th>Year</th>
-                                    <th>IF</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-row visible">
-                                    <td>1</td>
-                                    <td>FS Alamri, A Rehman, B AlGhofaily, A Ahmed, K Saleem</td>
-                                    <td><a href="https://doi.org/10.1109/ACCESS.2025.3574073" target="_blank">IEEE ACCESS</a></td>
-                                    <td>Leveraging RAG With Transformer for Context-Based Personalized Recommendations</td>
-                                    <td>13 & 97472-97486</td>
-                                    <td>W</td>
-                                    <td>2025</td>
-                                    <td>3.6</td>
-                                </tr>
-                                <tr class="table-row visible">
-                                    <td>2</td>
-                                    <td>FT Zuhra, K Saleem</td>
-                                    <td><a href="https://doi.org/10.1145/37483" target="_blank">ACM Transactions on Asian and Low-Resource Language Information Processing</a></td>
-                                    <td>Towards Development of New Language Resource for Urdu: The Large Vocabulary Word Embeddings</td>
-                                    <td>-</td>
-                                    <td>W</td>
-                                    <td>2025</td>
-                                    <td>2.0</td>
-                                </tr>
-                                <tr class="table-row visible">
-                                    <td>3</td>
-                                    <td>A Rehman, A Ahmed, TJ Alahmadi, AR Mirdad, B Al Ghofaily, K Saleem</td>
-                                    <td><a href="https://doi.org/10.7717/peerj-cs.2386" target="_blank">PeerJ Computer Science</a></td>
-                                    <td>A framework for generating recommendations based on trust in an informal e-learning environment</td>
-                                    <td>10, e2386</td>
-                                    <td>W</td>
-                                    <td>2024</td>
-                                    <td>2.5</td>
-                                </tr>
-                                <tr class="table-row visible">
-                                    <td>4</td>
-                                    <td>H Ali, K Saleem</td>
-                                    <td><a href="https://doi.org/10.1371/journal.pone.0304422" target="_blank">PLOS ONE</a></td>
-                                    <td>Generating large-scale real-world vehicle routing dataset with novel spatial data extraction tool</td>
-                                    <td>19(6), e0304422</td>
-                                    <td>W</td>
-                                    <td>2024</td>
-                                    <td>2.9</td>
-                                </tr>
-                                <tr class="table-row visible">
-                                    <td>5</td>
-                                    <td>FT Zuhra, K Saleem, S Naz</td>
-                                    <td><a href="https://doi.org/10.1016/j.jksuci.2024.102107" target="_blank">Journal of King Saud Univ. - Computer and Information Sciences (Elsevier)</a></td>
-                                    <td>An Accurate Transformer-Based Model for Transition-Based Dependency Parsing for Free Word Order Languages</td>
-                                    <td>36(6), 102107</td>
-                                    <td>W</td>
-                                    <td>2024</td>
-                                    <td>6.1</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>6</td>
-                                    <td>FT Zuhra, K Saleem</td>
-                                    <td><a href="https://doi.org/10.1016/j.ipm.2023.103334" target="_blank">Information Processing and Management</a></td>
-                                    <td>Hybrid Embeddings for Transition-Based Dependency Parsing of Free Word Order Languages</td>
-                                    <td>60/3, 103334</td>
-                                    <td>W</td>
-                                    <td>2023</td>
-                                    <td>6.9</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>7</td>
-                                    <td>MS Farooq, S Riaz, R Tehseen, U Farooq, K Saleem</td>
-                                    <td><a href="https://doi.org/10.1177/20552076231179056" target="_blank">Digital Health (Sage)</a></td>
-                                    <td>Role of Internet of things in diabetes healthcare: Network infrastructure, taxonomy, challenges, and security model</td>
-                                    <td>9, 20552076231179056</td>
-                                    <td>W</td>
-                                    <td>2023</td>
-                                    <td>3.3</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>8</td>
-                                    <td>MF Khan, K Saleem, M Alotaibi, MM Hazzazi, E Rehman, AA Abbasi, MA Gondal</td>
-                                    <td><a href="https://www.techscience.com/cmc/v73n2/48337" target="_blank">Computers, Materials & Continua (Tech Science)</a></td>
-                                    <td>Construction and optimization of TRNG based substitution boxes for block encryption algorithms</td>
-                                    <td>73(2), 2679-2696</td>
-                                    <td>W</td>
-                                    <td>2022</td>
-                                    <td>2.0</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>9</td>
-                                    <td>MF Khan, K Saleem, T Shah, MM Hazzazi, I Bahkali, PK Shukla</td>
-                                    <td><a href="https://onlinelibrary.wiley.com/doi/10.1155/2022/8338508" target="_blank">Computational Intelligence and Neuroscience (Wiley)</a></td>
-                                    <td>Block Cipher's Substitution Box Generation Based on Natural Randomness in Underwater Acoustics and Knight's Tour Chain</td>
-                                    <td>1, 8338508</td>
-                                    <td>W</td>
-                                    <td>2022</td>
-                                    <td>2.284</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>10</td>
-                                    <td>MF Khan, K Saleem, MM Hazzazi, M Alotaibi, PK Shukla, M Aqeel, SA Tuncer</td>
-                                    <td><a href="https://onlinelibrary.wiley.com/doi/10.1155/2022/2532497" target="_blank">Computational Intelligence and Neuroscience (Wiley)</a></td>
-                                    <td>Human Psychological Disorder towards Cryptography: True Random Number Generator from EEG of Schizophrenics and Its Application in Block Encryption's Substitution Box</td>
-                                    <td>1, 2532497</td>
-                                    <td>W</td>
-                                    <td>2022</td>
-                                    <td>2.284</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>11</td>
-                                    <td>A Ahmed, K Saleem, O Khalid, J Gao, U Rashid</td>
-                                    <td><a href="https://doi.org/10.1016/j.neucom.2022.09.023" target="_blank">Neurocomputing (Elsevier)</a></td>
-                                    <td>Trust-aware denoising autoencoder with spatial-temporal activity for cross-domain personalized recommendations</td>
-                                    <td>511 & 477-494</td>
-                                    <td>W</td>
-                                    <td>2022</td>
-                                    <td>6</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>12</td>
-                                    <td>U Rashid, A Javid, AR Khan, L Liu, A Ahmed, O Khalid, K Saleem, S Meraj, U Iqbal, R Nawaz</td>
-                                    <td><a href="https://peerj.com/articles/cs-888/" target="_blank">PeerJ Computer Science</a></td>
-                                    <td>A hybrid mask RCNN-based tool to localize dental cavities from real-time mixed photographic images</td>
-                                    <td>8, e888</td>
-                                    <td>W</td>
-                                    <td>2022</td>
-                                    <td>1.392</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>13</td>
-                                    <td>MF Khan, K Saleem, MA Alshara, S Bashir</td>
-                                    <td><a href="https://doi.org/10.1038/s41598-021-93344-z" target="_blank">Scientific Reports (Springer Nature)</a></td>
-                                    <td>Multilevel Information Fusion for Cryptographic Substitution Box Construction based on Inevitable Random Noise in Medical Imaging</td>
-                                    <td>11(1), 14282</td>
-                                    <td>W</td>
-                                    <td>2021</td>
-                                    <td>4.380</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>14</td>
-                                    <td>S Naseer, QA Minhas, K Saleem, GF Siddiqui, N Bhatti, H Mahmood, G Farooq</td>
-                                    <td><a href="https://peerj.com/articles/cs-617/" target="_blank">PeerJ Computer Science</a></td>
-                                    <td>A Game Theoretic Power Control and Spectrum Sharing Approach Using Cost Dominance in Cognitive Radio Networks</td>
-                                    <td>7, e617</td>
-                                    <td>W</td>
-                                    <td>2021</td>
-                                    <td>1.392</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>15</td>
-                                    <td>AR Khan, U Rashid, K Saleem, A Ahmed</td>
-                                    <td><a href="https://peerj.com/articles/cs-449/" target="_blank">PeerJ Computer Science</a></td>
-                                    <td>An architecture for non-linear discovery of aggregated multimedia document web search results</td>
-                                    <td>7, e449</td>
-                                    <td>W</td>
-                                    <td>2021</td>
-                                    <td>1.392</td>
-                                </tr>
-                                <tr class="table-row">
-                                    <td>16</td>
-                                    <td>A Ahmed, K Saleem, O Khalid, U Rashid</td>
-                                    <td><a href="https://doi.org/10.1016/j.eswa.2021.114757" target="_blank">Expert Systems with Applications (Elsevier)</a></td>
-                                    <td>On Deep Neural Network for Trust Aware Cross Domain Recommendations in E-commerce</td>
-                                    <td>174, 114757</td>
-                                    <td>W</td>
-                                    <td>2021</td>
-                                    <td>6.954</td>
-                                </tr>
+
+                    <!-- Publications List -->
+                    <div class="publications-list" id="publications-list">
+                        
+                        <!-- Publication Item 1 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">Ahmed, Adeel; Saleem, Khalid; Khalid, Osman; Rashid, Umer; Baz, Abdullah. On Deep Neural Network for Trust Aware Cross Domain Recommendations in E-commerce Expert Systems with Applications, Elsevier 2021. (accepted) (w Category)</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2021</span>
+                                <a href="https://doi.org/10.1016/j.eswa.2021.114757" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1016/j.eswa.2021.114757
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 2 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">M. I. Malik, M. A. Sindhu, A. S. Khattak, R. A. Abbasi, and K. Saleem, "Automating test oracles from restricted natural language agile requirements," Expert Systems, vol 38, no. 1, p. e12608, 2021. https://onlinelibrary.wiley.com/doi/abs/10.1111/exsy.12608</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2021</span>
+                                <a href="https://doi.org/10.1111/exsy.12608" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1111/exsy.12608
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 3 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">Muhammad Fahad, Khan; Khalid, Saleem;Mohammed Ali, Alshara; Shariq, Bashir. Multilevel Information Fusion for Cryptographic Substitution Box Construction based on Inevitable Random Noise in Medical Imaging . Nature Scientific Reports, Springer 2021. (accepted) (w Category)</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2021</span>
+                                <a href="https://doi.org/10.1038/s41598-021-93344-z" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1038/s41598-021-93344-z
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 4 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">A Ahmed, K Saleem, O Khalid, J Gao, U Rashid. Trust-aware denoising autoencoder with spatial-temporal activity for cross-domain personalized recommendations. Neurocomputing (Elsevier), vol 511, pp. 477-494, 2022.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2022</span>
+                                <a href="https://doi.org/10.1016/j.neucom.2022.09.023" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1016/j.neucom.2022.09.023
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 5 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">U Rashid, A Javid, AR Khan, L Liu, A Ahmed, O Khalid, K Saleem, S Meraj, U Iqbal, R Nawaz. A hybrid mask RCNN-based tool to localize dental cavities from real-time mixed photographic images. PeerJ Computer Science, vol 8, e888, 2022.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2022</span>
+                                <a href="https://peerj.com/articles/cs-888/" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.7717/peerj-cs.888
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 6 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">MF Khan, K Saleem, MA Alshara, S Bashir. Multilevel Information Fusion for Cryptographic Substitution Box Construction based on Inevitable Random Noise in Medical Imaging. Scientific Reports (Springer Nature), vol 11(1), 14282, 2021.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2021</span>
+                                <a href="https://doi.org/10.1038/s41598-021-93344-z" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1038/s41598-021-93344-z
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 7 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">S Naseer, QA Minhas, K Saleem, GF Siddiqui, N Bhatti, H Mahmood, G Farooq. A Game Theoretic Power Control and Spectrum Sharing Approach Using Cost Dominance in Cognitive Radio Networks. PeerJ Computer Science, vol 7, e617, 2021.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2021</span>
+                                <a href="https://peerj.com/articles/cs-617/" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.7717/peerj-cs.617
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 8 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">AR Khan, U Rashid, K Saleem, A Ahmed. An architecture for non-linear discovery of aggregated multimedia document web search results. PeerJ Computer Science, vol 7, e449, 2021.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2021</span>
+                                <a href="https://peerj.com/articles/cs-449/" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.7717/peerj-cs.449
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 9 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">A Ahmed, K Saleem, O Khalid, U Rashid. On Deep Neural Network for Trust Aware Cross Domain Recommendations in E-commerce. Expert Systems with Applications (Elsevier), vol 174, 114757, 2021.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2021</span>
+                                <a href="https://doi.org/10.1016/j.eswa.2021.114757" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1016/j.eswa.2021.114757
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 10 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">U Rashid, K Saleem, A Ahmed. MIRRE approach: nonlinear and multimodal exploration of MIR aggregated search results. Multimedia Tools and Applications (Springer Nature), vol 80(13), pp. 20217-20253, 2021.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2021</span>
+                                <a href="https://doi.org/10.1007/s11042-021-10603-x" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1007/s11042-021-10603-x
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 11 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">GF Siddiqui, MZ Iqbal, K Saleem, Z Saeed, A Ahmed, IA Hameed, MF Khan. A Dynamic Three-Bit Image Steganography Algorithm for Medical and e-Healthcare Systems. IEEE Access, vol 8, 181893, 2020.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2020</span>
+                                <a href="https://doi.org/10.1109/ACCESS.2020.3028315" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1109/ACCESS.2020.3028315
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 12 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">A Ahmed, K Saleem, U Rashid, A Baz. Modeling Trust Aware Recommendations with Temporal Dynamics in Social Networks. IEEE Access, vol 8, 149676, 2020.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2020</span>
+                                <a href="https://doi.org/10.1109/ACCESS.2020.3014051" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1109/ACCESS.2020.3014051
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 13 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">MI Malik, MA Sindhu, AS Khattak, RA Abbasi, K Saleem. Automating test oracles from restricted natural language agile requirements. Expert Systems (Wiley), vol 38(1), e12608, 2020.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2020</span>
+                                <a href="https://doi.org/10.1111/exsy.12608" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1111/exsy.12608
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 14 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">A Ahmed, MF Khan, K Saleem, T Shah. A Novel Design of Cryptographic SP-Network Based on Gold Sequences and Chaotic Logistic Tent System. IEEE Access, vol 7, pp. 84980-84991, 2019.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2019</span>
+                                <a href="https://doi.org/10.1109/ACCESS.2019.2925081" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1109/ACCESS.2019.2925081
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 15 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">MF Khan, A Ahmed, K Saleem. A Novel Cryptographic Substitution Box Design using Gaussian Distribution. IEEE Access, vol 7, pp. 15999-16007, 2019.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2019</span>
+                                <a href="https://doi.org/10.1109/ACCESS.2019.2893176" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1109/ACCESS.2019.2893176
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 16 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">T Qasim, M Zia, QA Minhas, N Bhatti, K Saleem, H Mahmood. An Ant Colony Optimization Based Approach for Minimum Cost Coverage on 3-D Grid in Wireless Sensor Networks. IEEE Communications Letters, vol 22(6), pp. 1140-1143, 2018.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2018</span>
+                                <a href="https://doi.org/10.1109/LCOMM.2018.2819643" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1109/LCOMM.2018.2819643
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 17 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">Z Batool, M Usman, K Saleem, M Abdullah-Al-Wadud, Fazal-e-Amin, A Al-Eliwi. Disease–Disease Association Using Network Modeling: Challenges and Opportunities. Journal Of Medical Imaging And Health Informatics (American Scientific Pub.), vol 8(4), pp. 627-638, 2018.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2018</span>
+                                <a href="https://doi.org/10.1166/jmihi.2" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1166/jmihi.2
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 18 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">S Qadri, DM Khan, SF Qadri, A Razzaq, N Ahmad, M Jamil, AN Shah, SS Muhammad, K Saleem, SA Awan. Multisource Data Fusion Framework for Land Use/Land Cover Classification Using Machine Vision. Journal of Sensors (Wiley), vol 1, 3515418, 2017.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2017</span>
+                                <a href="https://doi.org/10.1155/2017/3515418" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1155/2017/3515418
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 19 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">F Baig, MF Khan, S Beg, T Shah, K Saleem. Onion steganography: a novel layering approach. Nonlinear Dynamics (Springer Nature), vol 84(3), pp. 1431-1446, 2016.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2016</span>
+                                <a href="https://link.springer.com/article/10.1007/s11071-015-2580-5" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1007/s11071-015-2580-5
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 20 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">K Saleem, R. Jahangir, W. Masood, M. Siddiq. Interaction of fast magnetoacoustic solitons in dense plasmas. Physics of Plasmas (AIP), vol 22(9), 092312, 2015.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2015</span>
+                                <a href="https://doi.org/10.1063/1.4930270" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1063/1.4930270
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 21 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">MM Abbas, Z Muhammad, K Saleem, NA Saqib, H Mahmood. Energy Harvesting and Management in Wireless Networks for Perpetual Operations. Journal of Circuits, Systems, and Computers (World Scientific), vol 24(03), 1550041, 2015.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2015</span>
+                                <a href="https://doi.org/10.1142/S0218126615500413" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1142/S0218126615500413
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 22 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">MM Abbas, MA Tawhid, K Saleem, Z Muhammad, NA Saqib, H Malik, H Mahmood. Solar Energy Harvesting and Management in Wireless Sensor Networks. International Journal of Distributed Sensor Networks (Sage), vol 10(7), 436107, 2014.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2014</span>
+                                <a href="https://doi.org/10.1155/2014/436107" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1155/2014/436107
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Publication Item 23 -->
+                        <div class="publication-item">
+                            <p class="publication-citation">K Saleem, Z Bellahsene, E Hunt. PORSCHE: Performance ORiented SCHEma mediation. Information Systems (Elsevier), vol 33(7-8), pp. 637-657, 2008.</p>
+                            <div class="publication-meta">
+                                <span class="pub-type-badge">Journal</span>
+                                <span class="pub-year-badge">2008</span>
+                                <a href="https://doi.org/10.1016/j.is.2008.01.010" target="_blank" class="pub-doi-link">
+                                    <span class="material-icons">link</span> DOI: 10.1016/j.is.2008.01.010
+                                </a>
+                            </div>
+                        </div>
+
+                    </div><!-- publications-list -->
+                </div><!-- End accordion-content -->
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="http://www.qau.edu.pk/" target="_blank">QAU</a></li>
+                        <li><a href="https://cs.qau.edu.pk/admissions.php" target="_blank">Admissions</a></li>
+                        <li><a href="https://cs.qau.edu.pk/contactUs.php" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Programs</h3>
+                    <ul>
+                        <li><a href="https://cs.qau.edu.pk/Phd.php" target="_blank">PhD (Computer Science)</a></li>
+                        <li><a href="https://cs.qau.edu.pk/ms.php" target="_blank">MS (Information Science & Technology)</a></li>
+                        <li><a href="https://cs.qau.edu.pk/mphil.php" target="_blank">MPhil (Computer Science)</a></li>
+                        <li><a href="https://cs.qau.edu.pk/ms-ds.php" target="_blank">MS (Data Science)</a></li>
+                        <li><a href="https://cs.qau.edu.pk/Bs.php" target="_blank">BS (Computer Science)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Department of Computer Sciences,<br>
+                    Quaid-i-Azam University,<br>
+                    Islamabad, 45320, Pakistan<br>
+                    Tel: +92 (051) 9064-2057</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2026 © Department of Computer Sciences, QAU, Islamabad</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
                                 <tr class="table-row">
                                     <td>17</td>
                                     <td>U Rashid, K Saleem, A Ahmed</td>

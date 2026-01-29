@@ -362,5 +362,51 @@ function togglePublications() {
     content.classList.toggle('expanded');
 }
 
+// Toggle PhD Openings accordion
+function togglePhdOpenings() {
+    const accordions = document.querySelectorAll('.section-accordion');
+    const accordion = accordions[0]; // PhD Openings is first
+    const content = document.getElementById('phd-openings-content');
+    
+    accordion.classList.toggle('active');
+    content.classList.toggle('expanded');
+}
+
+// Search/filter publications
+function filterPublications() {
+    const searchInput = document.getElementById('publication-search');
+    const searchTerm = searchInput.value.toLowerCase();
+    const publicationItems = document.querySelectorAll('.publication-item');
+    const clearIcon = document.querySelector('.clear-icon');
+    
+    // Show/hide clear icon
+    if (searchTerm) {
+        clearIcon.style.display = 'block';
+    } else {
+        clearIcon.style.display = 'none';
+    }
+    
+    // Filter publications
+    publicationItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+}
+
+// Clear search
+function clearSearch() {
+    const searchInput = document.getElementById('publication-search');
+    searchInput.value = '';
+    filterPublications();
+}
+
 // Make it globally available
 window.togglePublications = togglePublications;
+window.togglePhdOpenings = togglePhdOpenings;
+window.filterPublications = filterPublications;
+window.clearSearch = clearSearch;
+

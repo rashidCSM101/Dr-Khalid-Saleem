@@ -211,7 +211,7 @@ body {
 .content-section {
     background-color: #fff;
     margin-bottom: 30px;
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
@@ -280,7 +280,7 @@ body {
     font-size: 2rem;
     color: #2e8b57;
     margin-bottom: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     border-bottom: 3px solid #2e8b57;
 }
 
@@ -348,7 +348,7 @@ body {
     display: inline-block;
     background: #e8f1f5;
     color: #4a5568;
-    padding: 12px 28px;
+    padding: 9px 28px;
     border-radius: 25px;
     font-size: 1rem;
     font-weight: 500;
@@ -502,7 +502,35 @@ body {
     max-width: 900px;
 }
 
-/* PhD Openings - Modern Professional Design */
+/* PhD Openings - Rounded Badges Design */
+.phd-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.phd-badge {
+    display: inline-block;
+    background: #e8f1f5;
+    color: #2c3e50;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #d1dfe6;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.phd-badge:hover {
+    background: #d4e4ec;
+    border-color: #b8cdd9;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* PhD Openings - Old Design (keep for compatibility) */
 .phd-openings-grid-new {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -767,17 +795,7 @@ body {
     font-size: 0.95rem;
 }
 
-.phd-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+
 
 /* Old PhD styles (keep for backward compatibility) */
 .phd-topics {
@@ -1063,9 +1081,7 @@ body {
     background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
 }
 
-.phd-badge {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-}
+
 
 .courses-grid {
     display: grid;
@@ -1343,6 +1359,15 @@ body {
         margin-bottom: 0;
     }
 
+    .phd-badges-container {
+        gap: 10px;
+    }
+
+    .phd-badge {
+        font-size: 0.85rem;
+        padding: 10px 18px;
+    }
+
     .ms-topics {
         grid-template-columns: 1fr;
     }
@@ -1446,3 +1471,150 @@ html {
         page-break-inside: avoid;
     }
 }
+
+/* New Publications List Design */
+.publication-search-bar {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.publication-search-bar input {
+    width: 100%;
+    padding: 14px 50px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.publication-search-bar input:focus {
+    outline: none;
+    border-color: #2e8b57;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+}
+
+.publication-search-bar .search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #757575;
+    font-size: 22px;
+}
+
+.publication-search-bar .clear-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #757575;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.publication-search-bar .clear-icon:hover {
+    color: #333;
+}
+
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.publication-item {
+    padding: 20px;
+    border-left: 4px solid #2e8b57;
+    background: #f9f9f9;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.publication-item:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.publication-citation {
+    margin: 0 0 12px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.publication-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pub-type-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #5c6bc0;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.pub-year-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #42a5f5;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.pub-doi-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #2e8b57;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.pub-doi-link:hover {
+    color: #1d5d3a;
+    text-decoration: underline;
+}
+
+.pub-doi-link .material-icons {
+    font-size: 18px;
+}
+
+.publication-item.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .publication-search-bar input {
+        font-size: 0.95rem;
+        padding: 12px 45px;
+    }
+
+    .publication-citation {
+        font-size: 0.95rem;
+    }
+
+    .publication-meta {
+        gap: 8px;
+    }
+
+    .pub-type-badge,
+    .pub-year-badge {
+        font-size: 0.8rem;
+        padding: 3px 10px;
+    }
+
+    .pub-doi-link {
+        font-size: 0.85rem;
+    }
+}
+
