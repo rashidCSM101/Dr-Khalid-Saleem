@@ -101,36 +101,36 @@
                     <span class="material-icons">science</span>
                     Research Interests
                 </h2>
-                <div class="research-interests-new">
-                    <div class="research-category">
-                        <div class="category-header">
-                            <span class="material-icons category-icon">computer</span>
-                            <h3>Computing</h3>
-                        </div>
-                        <div class="category-tags">
-                            <span class="research-tag">Quantum Computing</span>
-                        </div>
-                    </div>
-                    <div class="research-category">
-                        <div class="category-header">
-                            <span class="material-icons category-icon">analytics</span>
-                            <h3>Data Analytics</h3>
-                        </div>
-                        <div class="category-tags">
-                            <span class="research-tag">Big Data Analysis</span>
-                            <span class="research-tag">Machine Learning</span>
-                        </div>
-                    </div>
-                    <div class="research-category">
-                        <div class="category-header">
-                            <span class="material-icons category-icon">hub</span>
-                            <h3>Information Systems</h3>
-                        </div>
-                        <div class="category-tags">
-                            <span class="research-tag">Recommender Systems</span>
-                            <span class="research-tag">System Design</span>
-                        </div>
-                    </div>
+                <div class="research-interests-tags">
+                    <span class="research-interest-badge">Computing</span>
+                    <span class="research-interest-badge">Data Analytics</span>
+                    <span class="research-interest-badge">Information Systems</span>
+                </div>
+            </section>
+
+            <!-- Courses Taught -->
+            <section id="courses" class="content-section">
+                <h2 class="section-title">
+                    <span class="material-icons">school</span>
+                    Courses Taught
+                </h2>
+                <div class="courses-taught-tags">
+                    <span class="course-badge">CSC-224 - Database Systems <span class="level-tag">[BS]</span></span>
+                    <span class="course-badge">CSC-311 - Analysis & Design of Algorithms <span class="level-tag">[BS]</span></span>
+                    <span class="course-badge">CSC-313 - Computer Architecture <span class="level-tag">[BS]</span></span>
+                    <span class="course-badge">CSC-324 - Web Application Development <span class="level-tag">[BS]</span></span>
+                    <span class="course-badge">CSC-442 - Mobile Application Development <span class="level-tag">[BS]</span></span>
+                    <span class="course-badge">CSC-445 - Information Systems <span class="level-tag">[BS]</span></span>
+                    <span class="course-badge">CSC-652 - Advanced Analysis of Algorithms <span class="level-tag">[MS]</span></span>
+                    <span class="course-badge">CSC-65X - Intelligent Information System <span class="level-tag">[MS]</span></span>
+                    <span class="course-badge">CSC-702 - Advanced Operating Systems <span class="level-tag">[MS]</span></span>
+                    <span class="course-badge">CSC-751 - Distributed Systems <span class="level-tag">[MS]</span></span>
+                    <span class="course-badge">CSC-772 - Data Mining <span class="level-tag">[MS]</span></span>
+                    <span class="course-badge">DSC-672 - e-Government <span class="level-tag">[MS]</span></span>
+                    <span class="course-badge">IST-785 - Selected Topics in Information Science & Technology <span class="level-tag">[MS]</span></span>
+                    <span class="course-badge">CS-663 - Knowledge Representation and Reasoning <span class="level-tag">[MS/PhD]</span></span>
+                    <span class="course-badge">CSC-823 - Data Warehousing <span class="level-tag">[MS/PhD]</span></span>
+                    <span class="course-badge">CSC-863 - Metadata Model Management <span class="level-tag">[MS/PhD]</span></span>
                 </div>
             </section>
 
@@ -241,11 +241,15 @@
 
             <!-- Publications -->
             <section id="publications" class="content-section">
-                <h2 class="section-title">
-                    <span class="material-icons">article</span>
-                    Publications
-                </h2>
+                <button class="section-accordion" onclick="togglePublications()">
+                    <div class="accordion-header">
+                        <span class="material-icons accordion-icon">article</span>
+                        <h2 class="accordion-title">Publications (30)</h2>
+                    </div>
+                    <span class="material-icons accordion-arrow">expand_more</span>
+                </button>
                 
+                <div id="publications-content" class="accordion-content">
                 <!-- Tabs -->
                 <div class="tabs">
                     <button class="tab-button active" onclick="openTab(event, 'journals')">Journal Articles</button>
@@ -969,157 +973,9 @@
                         <li>On Board of Directors (2010 – 2022) - Pak-France Alumni Network (Registered Non-profit Society)</li>
                     </ul>
                 </div>
+                </div><!-- End accordion-content -->
             </section>
 
-            <!-- Courses Taught -->
-            <section id="courses" class="content-section">
-                <h2 class="section-title">
-                    <span class="material-icons">school</span>
-                    Courses Taught
-                </h2>
-                
-                <!-- BS Level Courses -->
-                <div class="course-category">
-                    <h3 class="course-category-title">
-                        <span class="category-badge bs-badge">BS</span>
-                        Bachelor's Level Courses
-                    </h3>
-                    <div class="courses-grid">
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-224</span>
-                                <span class="course-level">BS</span>
-                            </div>
-                            <p class="course-title">Database Systems</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-311</span>
-                                <span class="course-level">BS</span>
-                            </div>
-                            <p class="course-title">Analysis & Design of Algorithms</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-313</span>
-                                <span class="course-level">BS</span>
-                            </div>
-                            <p class="course-title">Computer Architecture</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-324</span>
-                                <span class="course-level">BS</span>
-                            </div>
-                            <p class="course-title">Web Application Development</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-442</span>
-                                <span class="course-level">BS</span>
-                            </div>
-                            <p class="course-title">Mobile Application Development</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-445</span>
-                                <span class="course-level">BS</span>
-                            </div>
-                            <p class="course-title">Information Systems</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MS Level Courses -->
-                <div class="course-category">
-                    <h3 class="course-category-title">
-                        <span class="category-badge ms-badge">MS</span>
-                        Master's Level Courses
-                    </h3>
-                    <div class="courses-grid">
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-652</span>
-                                <span class="course-level">MS</span>
-                            </div>
-                            <p class="course-title">Advanced Analysis of Algorithms</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-65X</span>
-                                <span class="course-level">MS</span>
-                            </div>
-                            <p class="course-title">Intelligent Information System</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-702</span>
-                                <span class="course-level">MS</span>
-                            </div>
-                            <p class="course-title">Advanced Operating Systems</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-751</span>
-                                <span class="course-level">MS</span>
-                            </div>
-                            <p class="course-title">Distributed Systems</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-772</span>
-                                <span class="course-level">MS</span>
-                            </div>
-                            <p class="course-title">Data Mining</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">DSC-672</span>
-                                <span class="course-level">MS</span>
-                            </div>
-                            <p class="course-title">e-Government</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">IST-785</span>
-                                <span class="course-level">MS</span>
-                            </div>
-                            <p class="course-title">Selected Topics in IST</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MS/PhD Level Courses -->
-                <div class="course-category">
-                    <h3 class="course-category-title">
-                        <span class="category-badge phd-badge">PhD</span>
-                        Master's / Doctoral Level Courses
-                    </h3>
-                    <div class="courses-grid">
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CS-663</span>
-                                <span class="course-level">MS/PhD</span>
-                            </div>
-                            <p class="course-title">Knowledge Representation</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-823</span>
-                                <span class="course-level">MS/PhD</span>
-                            </div>
-                            <p class="course-title">Data Warehousing</p>
-                        </div>
-                        <div class="course-card-new">
-                            <div class="course-header">
-                                <span class="course-code">CSC-863</span>
-                                <span class="course-level">MS/PhD</span>
-                            </div>
-                            <p class="course-title">Metadata Model Management</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
 

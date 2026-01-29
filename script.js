@@ -352,3 +352,15 @@ function toggleTableRows(tableId) {
 // Export function for external use
 window.openTab = openTab;
 window.toggleTableRows = toggleTableRows;
+
+// Toggle publications accordion
+function togglePublications() {
+    const accordion = document.querySelector('.section-accordion');
+    const content = document.getElementById('publications-content');
+    
+    accordion.classList.toggle('active');
+    content.classList.toggle('expanded');
+}
+
+// Make it globally available
+window.togglePublications = togglePublications;
